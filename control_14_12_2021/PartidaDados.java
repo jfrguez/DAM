@@ -7,6 +7,10 @@ public class PartidaDados{
 	public static void main(String[] args){
 		String juega = "";
 		int dado1=0, dado2=0, total=0;
+
+		//Instanciación del objeto num1 y num2 de la clase Random
+		Random num1 = new Random();
+		Random num2 = new Random();
 		
 		System.out.println("¿Desea comenzar la partida? (si / no)");
 		Scanner scan = new Scanner(System.in);
@@ -14,9 +18,6 @@ public class PartidaDados{
 		
 				
 		while (total <=21 & juega.equals("si")){
-		
-			Random num1 = new Random();
-			Random num2 = new Random();
 			dado1 = (num1.nextInt(6) + 1);
 			dado2 = (num2.nextInt(6) + 1);
 			
@@ -25,7 +26,7 @@ public class PartidaDados{
 			total = total + dado1 + dado2;
 			System.out.println("Total: " + total);
 			
-			/*
+			/* Se mantiene este código a modo de control en lo entregado en el examen
 			if (total <= 21){
 				System.out.println("¿Quiere otra tirada? (si / no)");
 				juega = scan.nextLine();
